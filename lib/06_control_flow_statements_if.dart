@@ -12,7 +12,7 @@ void foo(bool flag1, bool flag2) {
   if (flag1) {
     print('flag1');
   } else if (flag2) {
-    print(flag2);
+    print('flag2');
   } else {
     print('no flag1 and no flag2');
   }

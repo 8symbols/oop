@@ -12,4 +12,6 @@ import 'extra/callable_object.dart';
 
 void main() {
   final c1 = co.Class1(10);
+  var a = Shape;
+  // var b = Square;
 }

@@ -16,40 +16,41 @@ void main() {
   list6[1] = 'aaaaa';
   print(list6);
 
-  final list7 = [0, ...list1];
-  print(list7);
+  final list7 = [0, ...list1]; //spread operator
+  print('after spread list1 to list7 $list7');
 
   final list8 = ['a', if (2 + 2 == 4) 'b', 'c'];
   final list9 = ['a', if (2 + 2 == 5) 'b', 'c'];
   final list10 = ['a', if (2 + 2 == 5) 'b' else 'z', 'c'];
 
-  print(list8);
-  print(list9);
-  print(list10);
+  print('list8 $list8');
+  print('list9 $list9');
+  print('list10 $list10');
 
   final list11 = ['a', for (var i = 0; i < 5; ++i) i.toString()];
-  print(list11);
+  print('list11 $list11');
 
   // Как добавить несколько элементов по условию?
 
   final list12 = [];
   for (var i = 0; i < 3; ++i) {
     list12.add(i);
-    print(list12);
+    print('list12 $list12');
   }
 
+  print('list12 before remove');
   while (list12.isNotEmpty) {
     list12.removeLast();
-    print(list12);
+    print('list12 $list12');
   }
 
   final list13 = [5, 2, 3, 1];
   list13.sort();
-  print(list13);
+  print('sorted $list13');
 
   final list14 = list13.where((element) => element.isEven).toList();
-  print(list14);
+  print('filtered $list14');
 
   final list15 = list13.map((e) => e * 10).toList();
-  print(list15);
+  print('mapped $list15');
 }

@@ -8,10 +8,15 @@ int function2() {
 
 int function3() => 42;
 
+// Функция может иметь любое количество требуемых позиционных параметров.
+// За ними могут следовать либо именованные параметры,
+// либо необязательные позиционные параметры (но не оба).
 String function4(int positionalParam1, String positionalParam2) {
   return positionalParam2 * positionalParam1;
 }
 
+// Если вы не указали значение по умолчанию, их типы должны быть nullable,
+// так как их значение по умолчанию будет равно null:
 String function5(
   String positionalParam1, [
   int optionalParam1 = 3,
@@ -26,6 +31,8 @@ String function6(String positionalParam1, [int? optionalParam1]) {
       : positionalParam1 * optionalParam1;
 }
 
+// Именованные параметры являются необязательными,
+// если они явно не помечены как обязательные.
 String function7(
   String positionalParam1, {
   String? namedOptionalParam,
@@ -58,6 +65,7 @@ int Function(int) createAdder(int offset) {
   return adder;
 }
 
+//функция никогда не закончит выполнение успешно
 Never die() {
   throw Exception();
 }
@@ -87,7 +95,7 @@ void main(List<String> arguments) {
   final adder = createAdder(3);
   print(adder(4));
 
-  final anonymousFunction = (int num) => num * 10;
+  anonymousFunction(int num) => num * 10;
   print(anonymousFunction(4));
 
   final callbacks = [for (var i = 0; i < 5; ++i) () => print(i)];

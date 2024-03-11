@@ -1,3 +1,5 @@
+// typedef — это краткий способ ссылки на тип
+
 typedef IntList = List<int>;
 
 typedef ListMapper<X> = Map<X, List<X>>;

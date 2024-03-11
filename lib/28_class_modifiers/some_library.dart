@@ -1,5 +1,7 @@
 class CanInstantiateExtendImplementClass {}
 
+//Ключевое слово mixin определяет mixin. Ключевое слово class определяет класс.
+//Ключевое слово mixin class определяет класс, который можно использовать как обычный класс, так и mixin, с тем же именем и тем же типом.
 mixin Mixin {}
 
 mixin class CaInstantiateMixin {}

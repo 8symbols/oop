@@ -3,7 +3,7 @@ void main() {
   int x = 1;
   int hex = 0xDEADBEEF;
 
-  // double - 64 бита
+  // double - 64 бита, вещественные (дробные) числа
   double y = 1.1;
   double exponents = 1.42e5;
 

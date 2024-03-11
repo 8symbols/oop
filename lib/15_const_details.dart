@@ -1,7 +1,3 @@
-class Class1 {
-  int a = 0;
-}
-
 class Class2 {
   final int a;
 
@@ -17,7 +13,7 @@ void main() {
   const c22 = Class2(2);
   print(identical(c21, c22));
 
-  final list = [1, 2, 3];
+  final list = const [1, 2, 3];
   mutate(list);
   print(list);
 }

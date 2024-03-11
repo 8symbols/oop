@@ -1,5 +1,12 @@
 import 'dart:math' as math;
 
+// Паттерны - это синтаксическая категория в языке Dart,
+// подобная операторам и выражениям.
+// Паттерн представляет форму набора значений,
+// которые он может сопоставлять с фактическими значениями.
+
+// Паттерн может соответствовать значению, деструктурировать значение или и то,
+// и другое вместе, в зависимости от контекста и формы паттерна.
 void constantPattern(int number) {
   switch (number) {
     // Constant pattern matches if 1 == number.
@@ -20,7 +27,7 @@ void subpatterns(Object obj) {
 
 void destructing() {
   var numList = [1, 2, 3];
-  var [a, b, c] = numList;
+  var [a, b, ...d, c] = numList;
   print(a + b + c);
 }
 
@@ -136,6 +143,7 @@ void jsonValidation() {
     }
   }
 
+  //упрощение варианта выше
   if (json case {'user': [String name, int age]}) {
     print('User $name is $age years old.');
   }

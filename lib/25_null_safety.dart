@@ -3,6 +3,10 @@ class Class1 {
 }
 
 class Class2 {
+  // Чтобы отметить тип как nullable (допускающий значение null),
+  // после названия типа ставится оператор ? (вопросительный знак).
+  // И самое главное, NPE отлавливаются на этапе статического анализа/компиляции,
+  // а не в рантайме.
   int? _value;
 
   void init(int initialValue) {
@@ -57,6 +61,8 @@ void main() {
   nullableObject?.method1();
   nullableObject!.method1();
 
+  // если nullableObject не равно null, оно преобразуется в nullableObject.
+  // если nullableObject равно null, оно преобразуется в object и так далее.
   final firstNonNull = nullableObject ?? object ?? Class1();
 
   int Function()? function;
