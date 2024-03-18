@@ -1,7 +1,8 @@
 class CanInstantiateExtendImplementClass {}
 
 //Ключевое слово mixin определяет mixin. Ключевое слово class определяет класс.
-//Ключевое слово mixin class определяет класс, который можно использовать как обычный класс, так и mixin, с тем же именем и тем же типом.
+//Ключевое слово mixin class определяет класс,
+// который можно использовать как обычный класс, так и mixin, с тем же именем и тем же типом.
 mixin Mixin {}
 
 mixin class CaInstantiateMixin {}
@@ -12,6 +13,7 @@ abstract class CanNotInstantiate {
   abstract int canNotImplementProperty;
 }
 
+// base запрещает имплементацию за пределами своей собственной библиотеки
 base class CanNotBeImplementedOutsideOfLibrary {}
 
 // Должен быть base/final/sealed для сохранения ограничения по всей
@@ -22,6 +24,8 @@ final class BaseClassExtender extends CanNotBeImplementedOutsideOfLibrary {}
 final class BaseClassImplementer
     implements CanNotBeImplementedOutsideOfLibrary {}
 
+// Классы библиотек, не входящие в библиотеку интерфейса,
+// могут имплементировать интерфейс, но не расширять его
 interface class CanNotBeExtendedOutsideOfLibrary {}
 
 class InterfaceClassImplementer implements CanNotBeExtendedOutsideOfLibrary {}
